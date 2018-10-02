@@ -14,6 +14,7 @@
 		14F523522162433A00C34461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F523502162433A00C34461 /* LaunchScreen.storyboard */; };
 		14F5235F21628AA000C34461 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5235E21628AA000C34461 /* WeatherDataModel.swift */; };
 		14F5236121628D4500C34461 /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5236021628D4500C34461 /* ChangeCityViewController.swift */; };
+		C81C864AEA1B20CFB7ABFA71 /* Pods_Pogodynka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1642369CC43B445D724E33BA /* Pods_Pogodynka.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		14F523532162433A00C34461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F5235E21628AA000C34461 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		14F5236021628D4500C34461 /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
+		1642369CC43B445D724E33BA /* Pods_Pogodynka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pogodynka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43602CEA69B952911F9BE0AD /* Pods-Pogodynka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pogodynka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pogodynka/Pods-Pogodynka.debug.xcconfig"; sourceTree = "<group>"; };
+		69E9B01E4012960DABE3BFBF /* Pods-Pogodynka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pogodynka.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pogodynka/Pods-Pogodynka.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81C864AEA1B20CFB7ABFA71 /* Pods_Pogodynka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				14F523462162433800C34461 /* Pogodynka */,
 				14F523452162433800C34461 /* Products */,
+				C4FB197C339BB28FABDD2FB5 /* Pods */,
+				9EB5D8CD9467233A1C75AE2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +101,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		9EB5D8CD9467233A1C75AE2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1642369CC43B445D724E33BA /* Pods_Pogodynka.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4FB197C339BB28FABDD2FB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43602CEA69B952911F9BE0AD /* Pods-Pogodynka.debug.xcconfig */,
+				69E9B01E4012960DABE3BFBF /* Pods-Pogodynka.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14F523562162433A00C34461 /* Build configuration list for PBXNativeTarget "Pogodynka" */;
 			buildPhases = (
+				23402AD075F2568C5B70AD7D /* [CP] Check Pods Manifest.lock */,
 				14F523402162433800C34461 /* Sources */,
 				14F523412162433800C34461 /* Frameworks */,
 				14F523422162433800C34461 /* Resources */,
+				BC6E8B40189355458EA8891D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +185,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23402AD075F2568C5B70AD7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pogodynka-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC6E8B40189355458EA8891D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pogodynka/Pods-Pogodynka-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pogodynka/Pods-Pogodynka-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14F523402162433800C34461 /* Sources */ = {
@@ -312,6 +389,7 @@
 		};
 		14F523572162433A00C34461 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43602CEA69B952911F9BE0AD /* Pods-Pogodynka.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -330,6 +408,7 @@
 		};
 		14F523582162433A00C34461 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69E9B01E4012960DABE3BFBF /* Pods-Pogodynka.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
